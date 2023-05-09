@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+height: 100%;
+box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #333;
+}
+
+* {
+box-sizing: inherit;
+}
+
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    Justify-content: space-between; 
+    padding: 15px;
+}
+
+ .navbar a{
+    text-transform: uppercase;
+    color: #333;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+ }
+
+ .navbar a:hover{
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+ .logo{ 
+    margin-right: 50px;
+ }
+        
+.list{
+    list-style: none; 
+    display: flex; 
+    gap: 25px;
+}
+    
+#toggler, 
+.navbar label{   
+    display: none;  
+}
+    
+@media screen and (max-width: 600px) {
+     .menu{ 
+        width: 100%;    
+        max-height: 0; 
+        overflow: hidden;
+     }
+     .list{
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px
+    }
+    .navbar label{
+        display: inline-flex; 
+        align-items: center; 
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu{ 
+        max-height: 100%;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .menu-icon::before, .menu-icon::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color:#333;
+        position: absolute;
+        left: 0;
+        transition: transform 0.2s ease-out;
+      }
+      
+      .menu-icon::before {
+        top: 0;
+        transition-delay: 0.1s;
+      }
+      
+      .menu-icon::after {
+        bottom: 0;
+        transition-delay: 0.1s;
+      }
+      
+      /* Agregamos la clase "open" al menú cuando se hace clic */
+      .menu-icon.open::before {
+        transform: translateY(8px) rotate(45deg);
+        transition-delay: 0s;
+      }
+      
+      .menu-icon.open::after {
+        transform: translateY(-9px) rotate(-45deg);
+        transition-delay: 0s;
+      }
+      
+      .menu-icon.open span {
+        opacity: 0;
+      }
+      
+}

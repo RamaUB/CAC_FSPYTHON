@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu de comidas</title>
+        <link rel="stylesheet" href="./styles/reset.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/nav.css">
+        <link rel="stylesheet" href="./styles/pizzaBitcoinDay.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html"><img class="logo" src="./img/logo.png"></a> 
+                <input type="checkbox" id="toggler">
+                <label for="toggler" onclick="toggleMenu()">
+                    <i class="menu-icon"></i>
+                </label>
+                <div class="menu">
+                    <ul class="list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="shop.html">Bitcoin Pizza Day</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div id="bitcoinPizzaDay"><img src="./img/bitcoin-pizza-day.png" alt=""></div>
+            <div class="grid">
+                <div class="div1"><p>
+                    ¡Celebra el Bitcoin Pizza Day con nosotros! El 22 de mayo se conmemora el aniversario de la primera transacción documentada en la que se utilizó Bitcoin como forma de pago para comprar algo tangible en el mundo real: dos pizzas. Aquella transacción fue de 10.000 bitoins que equivalian a u$s40. Este hito histórico en la historia de las criptomonedas ha sido conocido desde entonces como el Bitcoin Pizza Day.
+                    <br>
+                    En nuestro restaurante, queremos celebrar este día especial ofreciéndote una promoción única: si pagas tu pizza con Bitcoin en nuestro establecimiento, ¡recibirás un descuento especial del 22% en tu pedido! Además, todos los clientes que paguen con Bitcoin ese día recibirán un cupón para una pizza gratis en su próxima visita.
+                    <br>
+                    Ven a disfrutar de nuestras deliciosas pizzas mientras celebramos la revolución de las criptomonedas. ¡Te esperamos!
+                </p></div>
+                <div class="div2">
+                    <p>Cotizaciones</p><hr>
+                    <table>
+                        <tbody>
+                          <tr>
+                            <td>Bitcoin:</td>
+                            <td id="cotBitcoin">------</td>
+                          </tr>
+                          <tr>
+                            <td><br> Dolar </td>
+                          </tr>
+                          <tr>
+                            <td>- Oficial:</td>
+                            <td id="cotDolarOf">----</td>
+                          </tr>
+                          <tr>
+                            <td>- Solidario:</td>
+                            <td id="cotDolarSol">----</td>
+                          </tr>
+                          <tr>
+                            <td>- Blue:</td>
+                            <td id="cotDolarBlue">----</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <hr>
+                      <p>Las pizzas bitcoin hoy costarian:</p>
+                      <p id="precioPizzaBitcoin"></p>
+                    
+                </div>
+                <div class="div3">
+                    <img id="pago" src="./img/pago-bitcoin.png" alt="">
+                </div>
+            </div>
+        </section>
+        <footer>
+			<img src="./img/logo.png">
+            <p> Pizzeria Codo a Codo </p> 
+            <p> 2023</p>
+        </footer>
+		<script src="./js/bitcoin.js"></script>
+        <script src="./js/nav.js"></script>
+    </body>
+</html>

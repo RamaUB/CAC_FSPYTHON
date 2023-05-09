@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pizzería C&C</title>
+        <link rel="stylesheet" href="./styles/reset.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Estilos CSS -->
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/comentarios.css">
+        <link rel="stylesheet" href="./styles/clima.css">
+        <link rel="stylesheet" href="./styles/galeria.css">
+        <link rel="stylesheet" href="./styles/nav.css">
+        <!-- Fonts de goole -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html"><img class="logo" src="./img/logo.png"></a> 
+                <input type="checkbox" id="toggler">
+                <label for="toggler" onclick="toggleMenu()">
+                    <i class="menu-icon"></i>
+                </label>
+                <div class="menu">
+                    <ul class="list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="shop.html">Bitcoin Pizza Day</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <hr><p><center>EN CONSTRUCCION</center></p><hr>
+                <div class="kodfun-galeri">
+                    <div style="background-image: url('./img/pz1.jpg');"></div>
+                    <div style="background-image: url('./img/pz2.jpg');"></div> 
+                    <div style="background-image: url('./img/pz3.jpg');"></div>
+                    <div style="background-image: url('./img/pz4.jpg');"></div> 
+                    <div style="background-image: url('./img/pz5.jpg');"></div>
+                </div>
+                <div class="descripcion">
+                    <h1>Bienvenidos a nuestra pizzería estilo napolitano</h1>
+                    <p>Donde la tradición italiana se encuentra con el sabor auténtico de la pizza. Nuestras recetas son heredadas de nuestro nono italiano, lo que significa que nuestras pizzas están hechas con los ingredientes más frescos y auténticos.
+                    <br>En nuestro horno a leña, cocinamos nuestras pizzas a la perfección, logrando una corteza crujiente y delgada, y un centro suave y jugoso. Además de nuestras pizzas tradicionales, también ofrecemos una variedad de opciones vegetarianas y sin gluten.
+                    <br>Ven y disfruta de una auténtica experiencia napolitana en nuestro acogedor restaurante, donde el ambiente cálido y acogedor te transportará a Italia. Nuestro equipo de expertos en pizza está listo para recibirte y brindarte una experiencia gastronómica inolvidable. ¡Te esperamos!</p>
+                </div>
+            </article>
+            <hr>
+        </section>
+
+        <section class="comentarios">
+            <h2>Comentarios de nuestros clientes</h2>
+            <article id="cajaComentarios">
+                <!-- Comentarios generados con API -->
+            </article>
+        </section>
+        
+        <section class="clima">
+            <article>
+                <hr>
+                    <div id="clima"></div>
+                <hr>
+            </article>
+        </section>
+        <section class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.082257042777!2d-58.3846678!3d-34.6036415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb228e768f31%3A0x3e1851d1ca4f46bd!2sSbarro!5e0!3m2!1sen!2sar!4v1683590847808!5m2!1sen!2sar" width="800" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+        <footer>
+			<img src="./img/logo.png">
+            <p> Pizzeria Codo a Codo </p> 
+            <p> 2023</p>
+        </footer>
+		<script src="./js/comentarios.js"></script>
+        <script src="./js/clima.js"></script>
+        <script src="./js/nav.js"></script>
+    </body>
+</html>
