@@ -16,15 +16,27 @@ function climaAhora(clima){
     cajaClima.appendChild(p);
 }
 
-const requestURL2 = 'https://api.weatherbit.io/v2.0/current?lat=-34.6131&lon=-58.3772&lang=es&key=d71ef4a704e8411db65e86cfbf5d796f';
-const request2 = new XMLHttpRequest();
-request2.open('GET', requestURL2);
-request2.responseType = 'json';
-request2.send();
+const requestURLUbi = 'https://ipgeolocation.abstractapi.com/v1/?api_key=b6aa20c0c5434dfcac09c82e91a9207c';
+const requestUbicacion = new XMLHttpRequest();
+requestUbicacion.open('GET', requestURLUbi);
+requestUbicacion.responseType = 'json';
+requestUbicacion.send();
 
-request2.onload = function() {
-    const clima = request2.response;
-    console.log(clima)
-    console.log(clima.data[0])
-    climaAhora(clima.data[0]);
-  }
+requestUbicacion.onload = function() {
+    const ubicacion = requestUbicacion.response;
+    let latitud = ubicacion.latitude;
+    let longitud = ubicacion.longitude;
+    
+    const requestURLClima = `https://api.weatherbit.io/v2.0/current?lat=${latitud}&lon=${longitud}&lang=es&key=d71ef4a704e8411db65e86cfbf5d796f`;
+    const requestClima = new XMLHttpRequest();
+    requestClima.open('GET', requestURLClima);
+    requestClima.responseType = 'json';
+    requestClima.send();
+
+    requestClima.onload = function() {
+        const clima = requestClima.response;
+        climaAhora(clima.data[0]);
+    }
+}
+
+
